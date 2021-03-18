@@ -129,7 +129,7 @@ body{
 
 @media only screen and (max-width: 1064px) {
     body {
-        background-image: url(Imagens/florestaSmall.png);
+        background-image: url(Imagens/FlorestaSmall.png);
     }
 
     #titulo{
