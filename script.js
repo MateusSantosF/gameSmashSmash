@@ -1,7 +1,7 @@
 var altura = 0;
 var largura = 0;
 var dificuldadeAtual;
-var nVidas = 2;
+var nVidas = 3;
 
 function pegaTamanho(){
     altura = window.innerHeight - 200 ;
@@ -12,12 +12,12 @@ function mudaDificuldade(){
 
     dificuldadeAtual = document.getElementById('btnDificuldade').textContent;
 
-    if( dificuldadeAtual == 'Fácil'){
-        document.getElementById('btnDificuldade').textContent = 'Difícil';
-    }else if(dificuldadeAtual == 'Difícil'){
-        document.getElementById('btnDificuldade').textContent = 'Insano';
+    if( dificuldadeAtual == 'easy'){
+        document.getElementById('btnDificuldade').textContent = 'hard';
+    }else if(dificuldadeAtual == 'hard'){
+        document.getElementById('btnDificuldade').textContent = 'Insane';
     }else{
-        document.getElementById('btnDificuldade').textContent = 'Fácil';
+        document.getElementById('btnDificuldade').textContent = 'easy';
     }
     
 }
@@ -28,7 +28,7 @@ function iniciarPartida(){
 
     //ATIVANDO INTERFACE DA PARTIDA
     document.getElementById('container-partida').style.visibility = 'inherit';
-    document.getElementById('areaVagalumes').style.zIndex = '3';
+    document.getElementById('areaMorcegos').style.zIndex = '3';
     temporizador();
 }
 
@@ -43,7 +43,7 @@ function temporizador(){
             document.getElementById('temporizador').style.marginLeft = '45%';
         }
 
-        vagalumes();
+        morcegos();
         document.getElementById('temporizador').textContent = minutos;
        
         if(nVidas != 0 && minutos == 0){
@@ -53,16 +53,17 @@ function temporizador(){
     }, 1000 ); 
 }
 
-function vagalumes(){
+function morcegos(){
 
-      //remover vagalume a cada 1s
-      if( document.getElementById('vagalume') ){
-        document.getElementById('vagalume').remove();
+      //remover morcego a cada 1s
+      if( document.getElementById('morcego') ){
+        document.getElementById('morcego').remove();
         nVidas--;      
-        if(nVidas == 1){
+        if(nVidas == 2){
             document.getElementById('barraVida').src = 'Imagens/vidaMetade.png';
-        }else{
+        }else if(nVidas == 1){
             document.getElementById('barraVida').src = 'Imagens/vidaVazia.png';
+        }else{
             setTimeout(function(){
                 location.replace("derrota.html");
             }, 1500);
@@ -72,40 +73,40 @@ function vagalumes(){
 
     var posicaoX = Math.abs(Math.floor(Math.random() * largura));
     var posicaoY = Math.abs(Math.floor(Math.random() * altura));
-    var vagalume = document.createElement('img');
+    var morcego = document.createElement('img');
     //configurando atirbutos
-    vagalume.src = 'Imagens/vagalume.png';
-    vagalume.className = tamanhoAleatorio();
-    vagalume.id = 'vagalume';
-    vagalume.style.left = posicaoX + 'px';
-    vagalume.style.top = posicaoY + 'px';
-    vagalume.style.position = 'absolute';
-    vagalume.style.scale = Math.random() + 'px';
-    vagalume.style.cursor = 'pointer';
+    morcego.src = 'Imagens/morcego.png';
+    morcego.className = tamanhoAleatorio();
+    morcego.id = 'morcego';
+    morcego.style.left = posicaoX + 'px';
+    morcego.style.top = posicaoY + 'px';
+    morcego.style.position = 'absolute';
+    morcego.style.scale = Math.random() + 'px';
+    morcego.style.cursor = 'pointer';
 
-    vagalume.onclick = function(){
+    morcego.onclick = function(){
         this.remove();
     }
-    vagalume.ondragstart = function(){ //bloqueia arrastar o vagalume com o mouse
+    morcego.ondragstart = function(){ //bloqueia arrastar o morcego com o mouse
         return false;
     }
 
     //adicionando ao documento
-    document.getElementById('areaVagalumes').appendChild(vagalume);
+    document.getElementById('areaMorcegos').appendChild(morcego);
 }
 
 function tamanhoAleatorio(){
-    //escolhe randomicamente qual classe será aplicada no vagalume
+    //escolhe randomicamente qual classe será aplicada no morcego
     var classe = Math.floor(Math.random() * 4);
     switch(classe){
         case 0:
-            return 'vagalume1';
+            return 'morcego1';
         case 1:
-            return 'vagalume2';
+            return 'morcego2';
         case 2:
-            return 'vagalume3';
+            return 'morcego3';
         case 3:
-            return 'vagalume4';
+            return 'morcego4';
     }
 }
 

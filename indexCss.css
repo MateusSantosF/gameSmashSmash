@@ -13,7 +13,7 @@ body{
 }
 
 #btnStart{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
     cursor: pointer;
     position: relative;
@@ -26,10 +26,10 @@ body{
     border-top: 4px solid rgba(255, 255,255,0.5);
     background-color: #f7b002;
     box-shadow: 2px 5px 1px black;
-    font-size: 36px;
+    font-size: 32px;
     color: white;
- 
-
+    font-weight: 60px;
+    padding-left: 10%;
 }
 #btnStart:focus{
     outline-style: none;
@@ -40,7 +40,7 @@ body{
     margin: 0 auto;
 }
 #btnDificuldade{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
     cursor: pointer;
     position: relative;
@@ -51,22 +51,27 @@ body{
     top: 75vh;
     border-radius: 25px;
     border:none;
-    border-top: 4px solid rgba(255, 255,255,0.5);
+    border-top: 5px solid rgba(255, 255,255,0.5);
     background-color: #f7b002;
     box-shadow: 2px 5px 1px black;
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: 60px;
+    padding-left: 10%;
     color: white;
 
 }
-#btnDificuldade{
+#btnDificuldade, #btnStart{
     outline-style: none;
 }
 #btnDificuldade:hover, #btnStart:hover{
     background-color: #1b2581;
 }
+#btnDificuldade:focus, #btnStart:focus{
+    border: none;
+    outline-style: none;
+}
 #titulo{
-    margin-top: -30px;
-  
+    margin-top: -7%;
 }
 
 /* INTERFACE DA PARTIDA */
@@ -75,33 +80,30 @@ body{
     visibility: hidden;
     width: 100%;
     max-width: 1200px;
-    margin: auto;
 }
-
-#barraVida{
-    max-width: 260px;
+#cronometro{
+    width: 100%;
     height: auto;
-    position: relative;
-    top: 40px;
-    
+    margin:  0 auto;
 }
-#cronometro{ 
-    position: relative;
-    float: right;
-}
-#cronometro img{
-    transform: scale(0.8);
-}
-#temporizador{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    position:absolute;
-    z-index: 2;
-    margin-left: 40%;
-    margin-top: 45%;
-    font-size: 32px;
+#barraVida{
+    width: 70px;
+    height: 200px;
+    display: inline-block; 
 }
 
-#areaVagalumes{
+#temporizador{
+    z-index: 2;
+    color: white;
+    font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    position: absolute;
+    top: 10px;
+    margin-left: 50%;
+    font-size: 45px;
+}
+
+#areaMorcegos{
     position: absolute;
     z-index: -1;
     top: 12%;
@@ -110,60 +112,73 @@ body{
     max-width: 1200px;
 }
 
-.vagalume1{
+.morcego1{
+    z-index: 3;
     transform: scale(0.9);
     transform: rotate(30deg);
 }
-.vagalume2{
+.morcego2{
+    z-index: 3;
     transform: scale(0.7);
     transform: rotate(60deg);
 }
 
-.vagalume3{
+.morcego3{
+    z-index: 3;
     transform: scale(0.5);
     transform: rotate(120deg);
 }
-.vagalume4{
+.morcego4{
+    z-index: 3;
     transform: scale(1.1);
+}
+
+@font-face{
+    font-family: pixel;
+    src: url(04b_30/04B_30__.TTF);
 }
 
 @media only screen and (max-width: 1064px) {
     body {
         background-image: url(Imagens/FlorestaSmall.png);
-        background-color: #0f0e1c;
     }
     #titulo{
         max-width: 100%;
+        margin-top: 15%;
     }
-    #barraVida{
-        transform: scale(0.7);
+    #btnDificuldade{
+        outline-style: none;
+        font-size: 32px;
     }
-    #cronometro{
-        top: -80px;
-        margin-left: 30px;
-        transform: scale(0.5);
+    #btnStart{
+        outline-style: none;
+        font-size: 36px;
 
     }
-    #temporizador{
-        font-size: 45px;
-        margin-left: 34%;
-    }
 
-    .vagalume1{
-        transform: scale(0.7);
+    .morcego1{
+        z-index: 3;
+        transform: scale(0.8);
         transform: rotate(30deg);
     }
-    .vagalume2{
+    .morcego2{
+        z-index: 3;
         transform: scale(0.6);
         transform: rotate(60deg);
     }
     
-    .vagalume3{
-        transform: scale(0.4);
+    .morcego3{
+        z-index: 3;
+        transform: scale(0.5);
         transform: rotate(120deg);
     }
-    .vagalume4{
-        transform: scale(0.3);
+    .morcego4{
+        z-index: 3;
+        transform: scale(0.4);
+    }
+
+    #temporizador{
+        margin-left: 40%;
     }
   }
 

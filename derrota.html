@@ -2,13 +2,70 @@
 <html >
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Você perdeu</title>
+
+    <style>
+        body{
+            margin: 0px auto;
+            padding: 0px;
+            background-color: #243443;
+        }
+        div{
+            background-image: url(Imagens/FlorestaSmall.png);
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            max-width: 1280px;
+            width: 100vw;
+            height: 100vh;
+        }
+        #derrota{
+            display: block;
+            margin: 0 auto;
+            margin-top: 15%;
+            margin-left: -5%;
+        }
+        #morcego{
+            position:absolute;
+            transform: scale(1.5);
+            margin-left: 10%;
+            margin-top: -10%;
+        }
+
+        button{
+            font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            width: 250px;
+            height: 80px;
+            position: relative;
+            margin-top: 20%;
+            margin-left: 15%;
+            cursor: pointer;
+            display: inline-block;
+            border:none;
+            border-radius: 25px;
+            border-top: 4px solid rgba(255, 255,255,0.5);
+            background-color: #f7b002;
+            box-shadow: 2px 5px 1px black;
+            font-size: 32px;
+            padding-left: 5%;
+            color: white;
+        }
+
+        @font-face{
+            font-family: pixel;
+            src: url(04b_30/04B_30__.TTF);
+        }
+    </style>
 </head>
 <body>
-    <h2>Você perdeu</h2>
 
-    <button onclick="location.replace('index.html')">Jogar novamente</button>
+    <div>
+        <img id="derrota" src="Imagens/derrota.png">
+        <img id="morcego" src="Imagens/morcego.png">
+
+        <button onclick="location.replace('index.html')">play<br>again</button>
+    </div>
+    
 </body>
 </html>
