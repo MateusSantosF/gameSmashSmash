@@ -130,9 +130,8 @@ body{
 @media only screen and (max-width: 1064px) {
     body {
         background-image: url(Imagens/FlorestaSmall.png);
+        background-color: #0f0e1c;
     }
-
-    
     #titulo{
         max-width: 100%;
     }

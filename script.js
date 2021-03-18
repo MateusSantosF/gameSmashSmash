@@ -50,9 +50,7 @@ function temporizador(){
             location.replace("vitoria.html");
         }
 
-    }, 1000 );
-
-    
+    }, 1000 ); 
 }
 
 function vagalumes(){
@@ -71,8 +69,6 @@ function vagalumes(){
             
         }    
     }
-    
-
 
     var posicaoX = Math.abs(Math.floor(Math.random() * largura));
     var posicaoY = Math.abs(Math.floor(Math.random() * altura));
@@ -96,8 +92,6 @@ function vagalumes(){
 
     //adicionando ao documento
     document.getElementById('areaVagalumes').appendChild(vagalume);
-
-  
 }
 
 function tamanhoAleatorio(){
