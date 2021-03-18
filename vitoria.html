@@ -7,25 +7,16 @@
 
     <style>
         body{
-            margin: 0px;
+            margin: 0px auto;
             padding: 0px;
             background-color: #243443;
         }
-        div{
-            background-image: url(Imagens/FlorestaSmall.png);
-            background-size: cover;
-            background-color: #243443;
-            position: absolute;
-            top: 0;
-            max-width: 1280px;
-            width: 100vw;
-            height: 100vh;
-        }
+      
         #derrota{
             display: block;
             margin: 0 auto;
-            margin-top: 15%;
-            margin-left: -5%;
+            margin-top: 5%;
+            margin-left: 35%;
         }
         #morcego{
             position:absolute;
@@ -33,14 +24,22 @@
             margin-left: 10%;
             margin-top: -10%;
         }
+        #morcego2{
+            display: inline;
+            position:absolute;
+            transform: scale(2);
+            margin-left: 80%;
+            margin-top: -10%;
+            transform: translateX(-1);
+        }
 
         button{
             font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             width: 250px;
             height: 80px;
             position: relative;
-            margin-top: 20%;
-            margin-left: 15%;
+            margin-top: 5%;
+            margin-left: 40%;
             cursor: pointer;
             display: inline-block;
             border:none;
@@ -49,13 +48,51 @@
             background-color: #f7b002;
             box-shadow: 2px 5px 1px black;
             font-size: 32px;
-            padding-left: 5%;
+            padding-left: 2%;
             color: white;
         }
 
         @font-face{
             font-family: pixel;
-            src: url(04b_30/04B_30__.TTF);
+            src: url(Resources/04b_30/04B_30__.TTF);
+        }
+        @media only screen and (max-width: 1064px) {
+            div{
+                background-image: url(Imagens/FlorestaSmall.png);
+                background-size: cover;
+                position: absolute;
+                max-width: 1280px;
+                height: 100vh;
+            }
+            #derrota{
+            display: block;
+            margin: 0 auto;
+            margin-top: 15%;
+            margin-left: -5%;
+            }
+            
+            button{
+                font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                width: 250px;
+                height: 80px;
+                position: relative;
+                margin-top: 20%;
+                margin-left: 15%;
+                cursor: pointer;
+                display: inline-block;
+                border:none;
+                border-radius: 25px;
+                border-top: 4px solid rgba(255, 255,255,0.5);
+                background-color: #f7b002;
+                box-shadow: 2px 5px 1px black;
+                font-size: 32px;
+                padding-left: 5%;
+                color: white;
+            }
+            #morcego2{
+                display: none;
+            }
+
         }
     </style>
 </head>
@@ -63,7 +100,8 @@
     
     <div>
         <img id="derrota" src="Imagens/vitoria.png">
-        <img id="morcego" src="Imagens/morcegoDerrota.pngs">
+        <img id="morcego" src="Imagens/morcegoDerrota.png">
+        <img id="morcego2" src="Imagens/morcegoDerrota.png">
         <button onclick="location.replace('index.html')">play<br>again</button>
     </div>
 

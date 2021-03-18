@@ -14,7 +14,6 @@ body{
 
 #btnStart{
     font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bolder;
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -41,7 +40,6 @@ body{
 }
 #btnDificuldade{
     font-family: pixel, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bolder;
     cursor: pointer;
     position: relative;
     display: inline-block;
@@ -133,9 +131,28 @@ body{
     transform: scale(1.1);
 }
 
+#creditos{
+    font-family: pixel ,Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: absolute;
+    display: inline-block;
+    font-size: 12px;
+    bottom: 5px;
+    left: 15px;
+    max-width: 200px;
+   
+}
+#creditos a{
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
 @font-face{
     font-family: pixel;
-    src: url(04b_30/04B_30__.TTF);
+    src: url(Resources/04b_30/04B_30__.TTF);
 }
 
 @media only screen and (max-width: 1064px) {
@@ -149,10 +166,12 @@ body{
     #btnDificuldade{
         outline-style: none;
         font-size: 32px;
+        top: 60vh;
     }
     #btnStart{
         outline-style: none;
         font-size: 36px;
+        top: 55vh;
 
     }
 
