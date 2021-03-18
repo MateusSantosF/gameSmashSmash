@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Mosquito</title>
+    <link type="text/css" rel="stylesheet" href="indexCss.css">
+    <script src="script.js"></script>
+</head>
+<body onresize="pegaTamanho()" onload="pegaTamanho()"></body>
+
+    <div class="container-interface">
+        <div class="containerBotao">
+            <button 
+            type="button"
+            id="btnStart"
+            onclick="iniciarPartida()"
+            >JOGAR</button>
+
+            <button
+            type="button" 
+            id="btnDificuldade" 
+            value = 'Fácil' 
+            onclick="mudaDificuldade()"
+            >Fácil</button>
+            
+        </div>
+        <img id="titulo" src="Imagens/Titulo.png">
+    </div>
+
+
+    <div id="container-partida">
+        
+        <img src="Imagens/vidaCheia.png" id="barraVida" >
+
+        <div id="cronometro">
+            <div id="temporizador">60</div>
+            <img src="Imagens/cronometro.png"> 
+        </div>
+
+        <div id="areaVagalumes">
+    
+        </div>
+        
+    </div>
+    
+
+    
+</body>
+</html>
